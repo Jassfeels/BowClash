@@ -23,13 +23,25 @@
   ol { text-align: left; margin: 18px auto 0; max-width: 440px; padding-left: 22px; }
   li { margin: 6px 0; }
 </style>
+<script>
+  // Google Analytics 4: page visits + download taps. Empty id = no tracking.
+  const GA_ID = "";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  if (GA_ID) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    gtag("js", new Date()); gtag("config", GA_ID);
+  }
+</script>
 </head>
 <body>
   <main class="card">
     <img class="logo" src="logo.png" alt="BowClash logo">
     <h1>BowClash</h1>
     <p>Stickman archery battles: 500 story levels, bosses, endless waves and 2-player versus.</p>
-    <a class="download" href="BowClash.apk" download>Download for Android</a>
+    <a class="download" href="BowClash.apk" download onclick="gtag('event', 'apk_download')">Download for Android</a>
     <div class="meta">Version <span id="version">-</span></div>
     <ol>
       <li>Tap <b>Download for Android</b>.</li>

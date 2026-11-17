@@ -1,4 +1,4 @@
-# BowClash
+# Stickman Archer: BowClash
 
 Stickman archery battles for Android.
 
